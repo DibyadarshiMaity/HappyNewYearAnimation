@@ -1,0 +1,143 @@
+@import url("https://fonts.googleapis.com/css2?family=Bilbo+Swash+Caps&family=Poppins:wght@900&display=swap");
+*,*after,*before{
+    padding:0;
+    margin:0;
+    box-sizing:border-box;
+    overflow: hidden;
+    transition:all 100ms ease-in;
+
+}
+body{
+    background-image:url('BG3.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    overflow: hidden;
+ }
+ #msg{
+    width:100%;
+    font-family:"Bilbo Swash Caps",cursive;
+    font-size: 8vw;
+    color:rgb(240, 59, 89);
+    position:absolute;
+    top:50vh;
+    left:23vw;
+    animation:message 2s linear forwards;
+    animation-delay: 9s;
+    opacity:0;
+ }
+ @keyframes message{
+    0%{
+        top:50vh;
+        opacity:0;
+    }
+    100%{
+        top:25vh;
+        opacity:1;
+    }
+ }
+ #year{
+    position:absolute;
+    top:50vh;
+    left:35vw;
+    display:-webkit-box;
+    -webkit-box-reflect:below 5px linear-gradient(transparent,black);
+    
+    
+ }
+ #year span{
+    color:white;
+    font-size: 10vw;
+    letter-spacing: 1vw;
+ }
+ #oldyear{
+    animation:change 5s linear forwards;
+    animation-delay:7s;
+    position:absolute;
+    font-size: 10vw;
+    left:54vw;
+    top:50vh;
+    color:white;
+    display:-webkit-box;
+    -webkit-box-reflect:below 5px linear-gradient(transparent,black);
+    
+ }
+ @keyframes change{
+    0%{
+        top:50vh;
+        -webkit-box-reflect:below 5px linear-gradient(transparent,transparent,transparent);
+    }
+    100%{
+        top:-50vh;
+        -webkit-box-reflect:below 5px linear-gradient(transparent,transparent,transparent);
+    }
+ }
+ #newyear{
+   position:absolute;
+   color:white;
+   font-size: 10vw;
+   top:50vh;
+   left:100vw;
+   animation:n1year 5s linear 1s forwards,n2year 1s linear 9s forwards;
+   -webkit-box-reflect:below 5px linear-gradient(transparent,black);
+
+ }
+ @keyframes n1year{
+   0%{
+      left:100vw;
+   }
+   100%{
+      left:60vw;
+   }
+ }
+ @keyframes n2year
+ {
+   0%{
+      left:60vw;
+   }
+   100%{
+      left:54vw;
+   }
+ }
+ #balloon {
+   content:' ';
+   position:absolute;
+   font-size: 10vw;
+   background-color: red;
+   height:7vw;
+   width:6vw;
+   border-radius: 50%;
+   top:13vw;
+   left:100vw;
+   animation:ball1 5.8s linear 1s forwards,ball2 3.9s linear 7s forwards;
+ }
+ #balloon::after{
+   content:'';
+   width:2px;
+   height:100px;
+   background-color: white;
+   position:absolute;
+   left:50%;
+   top:100%;
+
+ }
+ @keyframes ball1{
+   0%{
+      left:100vw;
+     }
+   100%{
+      left:53.5vw;
+      }
+ }
+ @keyframes ball2 {
+     0%{
+      top:13vw;
+     }
+     100%{
+      top:-50%;
+     }
+   
+ }
+
+
